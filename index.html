@@ -1,1 +1,29 @@
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+</head>
+
+<body>
+    <section class="container">
+
+        <h1>Hello World!</h1>
+        <p>A placeholder for static web site generated with <a href="https://pages.github.com/" target="_blank">GitHub
+                Pages</a>.</p>
+        <div id="root"></div>
+    </section>
+    <script>
+        ReactDOM.render(React.createElement('p', {}, 'React is loaded!'), document.getElementById('root'));
+    </script>
+</body>
+
+</html>
