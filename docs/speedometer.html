@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedometer</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+      console.log('init speedometer!')
+const root = document.querySelector('div#root');
+let id;
+function showPosition(position) {
+
+}
+
+// check if geolocation is supported
+if (!!navigator.geolocation) {
+    root.innerHTML = `Geolocation is not supported on this device.`
+}
+id = navigator.geolocation.watchPosition(
+    (position) => {
+        console.log('position updated');
+        root.innerHTML = `Current location -> latitude ${position.coords.latitude} :: longitude: ${position.coords.longitude} :: speed: ${position.coords.speed} :: heading: ${position.coords.heading}`
+    },
+    (err) => {
+        root.innerHTML = `Error -> ${err.code} : ${err.message} `
+    }, {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+})
+
+    </script>
+</body>
+</html>
